@@ -1,0 +1,344 @@
+body {
+  background: white
+  margin: 0; 
+  //font-weight: 100;
+  font-size: 90%
+  //font-family: 'HelveticaNeue';
+  font-family: 'Arimo', sans-serif;
+}
+/******FadingTitle******/
+h1 {
+  font-size: 10vw;
+  top: -35vw; text-shadow: 0 0 3px 4px rgba(0,0,0,0.3);
+  opacity: 0;
+  animation: fade 4s 2s forwards; 
+}
+h2 {
+  font-weight: 100;
+  font-size: 3vw; 
+  top: 20vw;
+  letter-spacing: .2vw;
+  opacity: 0;
+}
+h2:hover { animation: fade 1s 2s forwards; }
+
+#intro {
+  background: linear-gradient(#000,#0001),rgba(255,255,255,0.9);
+  background-size: 100% 100%, 100% 100%;
+  //padding-top: 56.44%;
+  background-position: 0 -99vh, 0 0;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;//soft-light;//luminosity
+  -webkit-background-blend-mode: darken;//safari&webkit
+  transition: 1s background-position ease-in-out;//linear
+  margin: 0 auto;
+  width: 100wh;
+  height: 100vh;
+  position: initial;//absolute
+  opacity: 0.9;
+}
+#intro:hover {background-position: 0 0, 0 0; }
+
+#intro h1 {
+  text-align: left;
+  margin: 0px;//10px
+  padding-top: 10px;
+  padding-left: 10px;
+  color: #000;
+  font-family: inherit;
+  font-size: 5vw;
+}
+#intro p{
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+  color: #fff;
+  font-family: inherit;
+  margin-bottom: 5vh;
+  font-size: 2vw;
+}
+#intro a {
+  color: #fff;
+}
+#intro input {
+  display: block;
+  position: absolute;
+  top: 0;//95vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border: 0px solid #00ff00;
+  border-radius:2px;
+  color: rgba(255,255,255,0.2);//text
+  background: rgba(0,0,0,0.0);//background
+  transition: opacity 0.5s;
+-webkit-transition: all ease 0.5s;
+-moz-transition: all ease 0.5s;
+-o-transition: all ease 0.5s;
+-ms-transition: all ease 0.5s ;
+transition: all ease 0.5s ;
+}
+#intro input:active {
+  border: 2px solid rgba(255,0,0,0.8);
+  color: rgba(255,0,0,1);//text color RED
+  background: rgba(255,255,255,0.1);//background RED
+}
+#intro input:hover {
+background:rgba(255,0,0,0.8);
+color:#fff;
+-webkit-transition: all ease 0.5s;
+-moz-transition: all ease 0.5s;
+-o-transition: all ease 0.5s;
+-ms-transition: all ease 0.5s ;
+transition: all ease 0.5s ;
+} 
+#bottomButton {
+  position: absolute;
+  //top: //6950x;
+  bottom: 0;//pied de page
+  left: 50%;
+  //margin: 0 auto;
+  border: 0px solid #00ff00;
+  border-radius:2px;
+  color: rgba(255,255,255,0.2);//text
+  background: rgba(0,0,0,0.0);//background
+  transition: opacity 0.5s;
+-webkit-transition: all ease 0.5s;
+-moz-transition: all ease 0.5s;
+-o-transition: all ease 0.5s;
+-ms-transition: all ease 0.5s ;
+transition: all ease 0.5s ;
+}
+#intro input:active {
+  border: 2px solid rgba(255,0,0,0.8);
+  color: rgba(255,0,0,1);//text color RED
+  background: rgba(255,255,255,0.1);//background RED
+}
+#intro input:hover {
+background:rgba(255,0,0,0.8);
+color:#fff;
+-webkit-transition: all ease 0.5s;
+-moz-transition: all ease 0.5s;
+-o-transition: all ease 0.5s;
+-ms-transition: all ease 0.5s ;
+transition: all ease 0.5s ;
+}
+/*****************************/
+#overlayCenter {
+  padding-left: 40vw;//40vw;
+}
+#overlayLeft {
+  padding-left: 5vw;
+}
+#overlayRight {
+ padding-left: 70vw;
+}
+#overlay {
+  display: block;//block
+  position: relative; //relative
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background: rgba(0,0,0,0.3);
+  margin-top: 800px;//% vh
+  left: 0;
+}
+#overlay h1 {//#overlay * 
+  text-align: center;
+  padding-top: 3vw;
+  color: #fff;
+  font-family: inherit;
+  font-size: 2.1vw;
+}
+#overlay p {//#overlay * 
+  text-align: center;
+  width: 20vw;
+  margin: 0 auto;
+  color: #1009;
+  font-family: inherit;
+  margin-bottom: 1vw;
+  font-size: 1.5vw;
+}
+#overlay a {
+  color: #fff;
+}
+/*****************************/
+#clock-container { 
+  display: block;
+  position: relative;
+  width: 20vw;
+//  padding-bottom: 100%;
+//  vertical-align: middle;
+  overflow: hidden;
+  margin-top: 800px;//% vh
+  left: 1vw;
+//  background: midnightblue;
+} 
+#face { stroke-width: 2px; stroke: #fff; }
+#hour, #min, #sec { 
+  stroke-width: 1px;
+  fill: #333;
+  stroke: #555;
+}
+#sec { stroke: #f55; }
+  
+/**********Pendulum*************/
+@keyframes sway { 
+	to { transform: rotate(30deg);   } 
+}
+@keyframes fade {
+	to { opacity: 1; }
+}
+@keyframes widen {
+	to { width: 40%; }
+}
+@keyframes secondcount {
+	to { transform: rotate(355deg); }
+}
+#watch { 
+  width: 12vw; height: auto;
+  margin: 0 auto;
+  transform-origin: center top;
+  transform: rotate(-30deg); 
+  top: -10px; 
+  margin-top: 800px;//% vh
+  animation: sway 2.2s infinite alternate ease-in-out;
+} 
+#watch img.watch { width: 100%; height: auto; }
+img.seconds { 
+  position: absolute;
+  width: 8%; height:auto;
+  bottom: 11.75%; left: 45%;
+  transform-origin: center 72.4%;
+  animation: secondcount 60s infinite linear; 
+}
+/**********PolaEffect**********/
+#pola { 
+  position: relative; //absolute
+  margin-top: 800px;//% vh
+  left: 60vw;
+  margin: auto 1.2rem;
+  float: left; border: 1.25vw solid #e3e4d3;//25px
+  border-bottom-width: 2.5vw; //50px
+	-webkit-transition: 3s box-shadow ease-in; 
+  -moz-transition: 3s box-shadow ease-in; 
+  -o-transition: 3s box-shadow ease-in; 
+  transition: 3s box-shadow ease-in; 
+	box-shadow: 0 0 10vw 10vw rgba(29,25,4,1) inset, 0 0 0.15vw 0.3vw rgba(0,0,0,0.07);//200px 200px, 0 0 3px 6px
+  width: 20vw; height: 18.2vw;//400px 364px
+  background-position: center;//to center background photo
+  background-image:url(http://demosthenes.info/assets/images/christine-adams.jpg);
+  background-size: 20vw 20vw;
+  background-repeat: no-repeat;
+  -webkit-filter: sepia(50%); 
+  -o-filter: sepia(50%); 
+  -ms-filter: sepia(50%); 
+  -moz-filter: sepia(50%); 
+  filter: sepia(50%); 
+}
+#pola:hover { 
+  box-shadow: 0 0 100px 0 rgba(29,25,4,0.8) inset, 0 0 3px 6px rgba(0,0,0,0.07); 
+  -webkit-filter: sepia(20%); 
+  -o-filter: sepia(20%); 
+  -ms-filter: sepia(20%); 
+  -moz-filter: sepia(20%); 
+  filter: sepia(20%);
+}
+
+/**********VideoSetup**********/
+#set-height{
+  display block
+  //height 13500px//autoSet not working
+  height 7000px
+}
+#responsiveVideo{
+  position: fixed;//centrage pour absolute
+  //padding-bottom: 56.25%;
+	//padding-top: 30px;
+  //padding-left: 17.78%;
+  height: 100%;
+  width: 100%;
+	//max-height: 720px;//100%
+  margin: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+bottom: 0;//tres IMPORTANT pour le videoscroll
+  //overflow: auto;
+	//overflow: hidden;
+  z-index: -100;
+  //overflow: hidden;
+}
+#wrapperVideo{
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 100%;//960px;//ajouté pour limiter la largeur de la vidéo 1280px
+  max-height: 100%;//720px;
+  height: 960px;//auto;//100%
+  width: 720px;//auto;//100%
+  //overflow: hidden;
+}
+#v0{
+position: absolute;
+display: block;//flex;//block; //is very important
+//justify-content: center;
+//align-items: center;
+//position: absolute;//fixed
+top: 0;
+bottom: 0;
+//margin-left: 20vh;//auto
+//margin-right: 20vh;//auto
+//min-width: 100%;//640px;
+//min-height: 100%;
+
+width: 100%;//auto
+height: 100%;//OLD WORKING
+
+//max-width: 100%;//auto
+//max-height: 100%;//OLD WORKING
+
+//max-width : 960px;//ajouté pour limiter la largeur de la vidéo ou 1280px OLD WORKING
+//max-height: 720px;//100% OSEF
+//max-width: 100%;
+//height:  100vh;
+//z-index: -100;
+//background-size: cover;
+//  position fixed
+//  top 0  
+//  left 0
+//  height 100%
+//filter: grayscale(1);
+}
+/*
+#time
+  position fixed
+  display block
+  top 10px
+  right 10px
+  z-index 2
+  width 10px
+  height 10px
+  border-radius 20px
+  background-color rgba(0,0,255,0.5)
+*/
+/*
+#scroll
+  position fixed
+  display block
+  top 10px
+  right 10px
+  z-index 2
+  width 10px
+  height 10px
+  border-radius 20px
+  background-color rgba(255,0,0,0.5)
+*/
+ /************dotMark***********/
+//#dot //need to hardcode height in pixel
