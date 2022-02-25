@@ -316,13 +316,13 @@ Boarding Pass
   text-align: left;
   margin: 0px;
   padding-top: 10px;
-  padding-left: 10px;
+  padding-left: 20%;
   color: #fff;
   font-family: inherit;
   font-size: 5vw;
   position: relative;
   top: 43%;
-  left: 20%;
+ 
  
 }
 #intro a {
