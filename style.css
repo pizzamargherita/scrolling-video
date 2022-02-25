@@ -35,7 +35,7 @@ h2:hover {
   animation: fade 1s 2s forwards;
 }
 #intro {
-  background: linear-gradient(#1e2d5e, rgba(30,45,94,0.70));  /* this is where you can change that blue opacity*/
+  background: linear-gradient(#000000, rgba(0, 0, 0, 0.7));  /* this is where you can change that blue opacity*/
   background-size: 100% 100%, 100% 100%;
   background-position: 0 -99vh, 0 0;
   background-repeat: no-repeat;
