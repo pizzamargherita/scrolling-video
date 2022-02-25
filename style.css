@@ -1,11 +1,23 @@
+/* CORE STYLES */
+
+
+
 body {
   background: #fff;
   margin: 0;
   font-size: 90%;
-  font-family: 'Arimo', sans-serif;
+  font-family: proxima-nova, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
 }
 /******FadingTitle******/
+
+
 h1 {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 100;
   font-size: 10vw;
   top: -35vw;
   text-shadow: 0 0 3px 4px rgba(0,0,0,0.3);
@@ -23,7 +35,7 @@ h2:hover {
   animation: fade 1s 2s forwards;
 }
 #intro {
-  background: linear-gradient(#000, rgba(0,0,0,0.067)), rgba(255,255,255,0.9);
+  background: linear-gradient(#1e2d5e, rgba(30,45,94,0.067)), rgba(255,255,255,0.9);
   background-size: 100% 100%, 100% 100%;
   background-position: 0 -99vh, 0 0;
   background-repeat: no-repeat;
@@ -44,7 +56,7 @@ h2:hover {
   margin: 0px;
   padding-top: 10px;
   padding-left: 10px;
-  color: #000;
+  color: #c39237;
   font-family: inherit;
   font-size: 5vw;
 }
@@ -79,12 +91,12 @@ h2:hover {
   transition: all ease 0.5s;
 }
 #intro input:active {
-  border: 2px solid rgba(255,0,0,0.8);
-  color: #f00;
+  border: 2px solid rgba(195, 146, 55, 0.93);
+  color: #c39237;
   background: rgba(255,255,255,0.1);
 }
 #intro input:hover {
-  background: rgba(255,0,0,0.8);
+  background: rgba(195, 146, 55, 0.93);
   color: #fff;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
@@ -108,12 +120,12 @@ h2:hover {
   transition: all ease 0.5s;
 }
 #intro input:active {
-  border: 2px solid rgba(255,0,0,0.8);
-  color: #f00;
+  border: 2px solid rgba(195, 146, 55, 0.93);
+  color: #c39237;
   background: rgba(255,255,255,0.1);
 }
 #intro input:hover {
-  background: rgba(255,0,0,0.8);
+  background: rgba(195, 146, 55, 0.93);
   color: #fff;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
