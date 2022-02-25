@@ -35,7 +35,7 @@ h2:hover {
   animation: fade 1s 2s forwards;
 }
 #intro {
-  background: linear-gradient(#1e2d5e, rgba(30,45,94,0.067)), rgba(255,255,255,0.9);
+  background: linear-gradient(#1e2d5e, rgba(30,45,94,0.70));  /* this is where you can change that blue opacity*/
   background-size: 100% 100%, 100% 100%;
   background-position: 0 -99vh, 0 0;
   background-repeat: no-repeat;
@@ -46,8 +46,58 @@ h2:hover {
   width: 100wh;
   height: 100vh;
   position: initial;
-  opacity: 0.9;
+  opacity: 1;
 }
+/*BEGINNING of scroll animation*/
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+.icon-scroll {
+  width: 40px;
+  height: 70px;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 25px;
+}
+.icon-scroll:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
+}
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(46px);
+  }
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(46px);
+  }
+}
+/* END of scroll animation */
+
 #intro:hover {
   background-position: 0 0, 0 0;
 }
@@ -65,7 +115,9 @@ h2:hover {
   width: 80%;
   margin: 0 auto;
   color: #fff;
-  font-family: inherit;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-style: italic;
   margin-bottom: 5vh;
   font-size: 2vw;
 }
@@ -93,10 +145,10 @@ h2:hover {
 #intro input:active {
   border: 2px solid rgba(195, 146, 55, 0.93);
   color: #c39237;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255);
 }
 #intro input:hover {
-  background: rgba(195, 146, 55, 0.93);
+  background: rgba(195, 146, 55, 0);
   color: #fff;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
