@@ -37,7 +37,7 @@ h2:hover {
 #intro {
   background: linear-gradient(#000000, rgba(0, 0, 0, 0.7));  /* this is where you can change that blue opacity*/
   background-size: 100% 100%, 100% 100%;
-  background-position: 0 -90vh, 0 0;
+  background-position: 0 -100vh, 0 0;
   background-repeat: no-repeat;
   background-blend-mode: darken;
   -webkit-background-blend-mode: darken;
