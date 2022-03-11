@@ -65,7 +65,7 @@ body {
   height: 100vh;
   margin: 0;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: proxima-nova, sans-serif;
 }
 
 /*--------------------
@@ -419,7 +419,75 @@ Boarding Pass
   box-shadow: 0 1px 24px -1px rgba(0 0 0 / 10%);
   transition: transform 0.2s ease-out;
   will-change: transform;
+
+/*   animation-name: spin; */
+animation-timing-function: linear;
+animation-duration: 6s;
+animation-iteration-count: infinite;
+animation-fill-mode: both;
 }
+
+
+:root {
+--main-angle: 15deg;
+--secondary-angle: 22deg;
+}
+
+@keyframes move {
+0% {
+  transform: perspective(1000px) scale(1.05) rotateX(var(--main-angle))
+    rotateY(calc(var(--main-angle) * -1));
+}
+
+12.5% {
+  transform: perspective(1000px) scale(1.05) rotateX(var(--secondary-angle))
+    rotateY(0);
+}
+
+25% {
+  transform: perspective(1000px) scale(1.05) rotateX(var(--main-angle))
+    rotateY(var(--main-angle));
+}
+
+37.5% {
+  transform: perspective(1000px) scale(1.05) rotateX(0)
+    rotateY(var(--secondary-angle));
+}
+
+50% {
+  transform: perspective(1000px) scale(1.05)
+    rotateX(calc(var(--main-angle) * -1)) rotateY(var(--main-angle));
+}
+
+62.5% {
+  transform: perspective(1000px) scale(1.05)
+    rotateX(calc(var(--secondary-angle) * -1)) rotateY(0);
+}
+
+75% {
+  transform: perspective(1000px) scale(1.05)
+    rotateX(calc(var(--main-angle) * -1))
+    rotateY(calc(var(--main-angle) * -1));
+}
+
+87.5% {
+  transform: perspective(1000px) scale(1.05) rotateX(0)
+    rotateY(calc(var(--secondary-angle) * -1));
+}
+
+100% {
+  transform: perspective(1000px) scale(1.05) rotateX(var(--main-angle))
+    rotateY(calc(var(--main-angle) * -1));
+}
+}
+
+@keyframes spin {
+0% {
+  transform: perspective(1000px) scale(1.05) rotateY(0deg);
+}
+100% {
+  transform: perspective(1000px) scale(1.05) rotateY(360deg);
+}}
 
 
 #overlay h1 {

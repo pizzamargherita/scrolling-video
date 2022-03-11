@@ -74,6 +74,50 @@ setInterval(function() {
 }, 40);
 */
 
+/*OVERLAY ROTATION*/
+const overlays = document.querySelectorAll(".overlay");
+overlays.forEach((overlay) => {
+  const height = overlay.clientHeight;
+  const width = overlay.clientWidth;
+
+  const mouseMoveHandler = (evt) => {
+    evt.preventDefault();
+
+    requestAnimationFrame(() => {
+      const xRotation = -30 * ((evt.layerY - height / 2) / height);
+      const yRotation = 20 * ((evt.layerX - width / 2) / width);
+
+      overlay.style.transform = `perspective(1000px) scale(1.05) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+    });
+  };
+
+  overlay.addEventListener("mousemove", mouseMoveHandler);
+
+  overlay.addEventListener("mouseenter", (evt) => {
+    evt.preventDefault();
+    overlay.addEventListener("mousemove", mouseMoveHandler);
+  });
+
+  overlay.addEventListener("mouseout", (evt) => {
+    evt.preventDefault();
+    overlay.style.transform = "perspective(1000px) scale(1) rotateX(0) rotateY(0)";
+    overlay.removeEventListener("mousemove", mouseMoveHandler);
+  });
+  
+  overlay.addEventListener("click", (evt) => {
+    evt.preventDefault();
+    overlay.style.animation = "spin 1s ease-in-out";
+    setTimeout(() => {      
+      overlay.style.animation = '';
+    }, 1000);
+  });
+});
+
+
+
+
+
+
 /***CLOCK***/
 setInterval(function() {
   //Accelerate towards the target:
