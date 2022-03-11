@@ -391,7 +391,7 @@ Boarding Pass
 }
 /*****************************/
 #overlayCenter {
-  padding-left: 40vw;
+  padding-left: 35vw;
 }
 #overlayLeft {
   padding-left: 5vw;
@@ -402,12 +402,11 @@ Boarding Pass
 #overlay {
   display: block;
   position: relative;
-  width: 20vw;
+  width: 30vw;
   height: 20vw;
   background: rgba(0,0,0,0.3);
   margin-top: 800px;
   left: 0;
-  text-transform: uppercase;
   color: rgba(240 240 240 / 0.7);
   border-radius: 20px;
   background-image: linear-gradient(
@@ -493,20 +492,25 @@ animation-fill-mode: both;
 #overlay h1 {
   text-align: left;
   padding-top: 1.5vw;
-  padding-left: 1vw;
+  padding-left: 1.5vw;
   color: #fff;
   font-family: inherit;
-  font-size: 1.9vw;
+  font-size: 1.5vw;
+  font-weight: 400;
+  text-transform: uppercase;
+  
 }
 #overlay p {
-  text-align: center;
-  width: 20vw;
-  margin: 0 auto;
+  text-align: left;
+  width: 28vw;
   color: rgba(17,0,0,0.6);
   font-family: inherit;
   margin-bottom: 1vw;
-  font-size: 1.2vw;
+  line-height: normal;
+  font-size: 1vw;
+  font-weight: ;
   padding: 1vw;
+  padding-left: 1.5vw;
 }
 #overlay a {
   color: #fff;
