@@ -789,6 +789,10 @@ outline: none;
   color: #fff;
 }
 
+#launchButton:hover {
+  background-color: #a18247;
+}
+
 .touchpoint {
   border-radius: 50%;
   border-color: transparent;
