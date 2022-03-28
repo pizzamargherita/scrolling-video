@@ -115,6 +115,45 @@ overlays.forEach((overlay) => {
 
 
 
+/*POPUP ELEMENT*/
+
+function openExperience() {
+  var x = document.getElementById('experienceContent');
+  if (x.style.display === 'flex') {
+    x.style.display = 'none';
+  } else {
+    x.style.display = 'flex';
+  }
+}
+
+/*TOUCHPOINT BUTTONS*/
+
+function expandFirst() {
+  var x = document.getElementById("infoStart");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function expandSecond() {
+  var x = document.getElementById("infoMiddle");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function expandThird() {
+  var x = document.getElementById("infoEnd");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 
 
 
