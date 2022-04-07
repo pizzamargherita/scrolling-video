@@ -94,7 +94,6 @@ button, input[type="submit"], input[type="reset"] {
     position: fixed;
     top: 10px;
     right: 60px;
-    width: auto;
 }
 
 /* --------- LOGO NAV ------------ */
@@ -137,10 +136,13 @@ button, input[type="submit"], input[type="reset"] {
     width: 42px;
     height: auto;
     margin: 20px;
-    opacity: 0.5;
+    opacity: 0.7;
     cursor: not-allowed;
 }
 
+.sideMenu-icon:hover {
+    opacity: 1;
+}
 
 /* --------- MAIN MENU ------------ */
 
