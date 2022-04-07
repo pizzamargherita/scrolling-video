@@ -114,47 +114,18 @@ overlays.forEach((overlay) => {
 });
 
 
-
 /*POPUP ELEMENT*/
 
-function openExperience() {
-  var x = document.getElementById('experienceContent');
+function openNewExperience() {
+  var x = document.getElementById('newExp');
   if (x.style.display === 'flex') {
     x.style.display = 'none';
   } else {
     x.style.display = 'flex';
   }
+  var iframe = document.getElementById('newExp');
+  iframe.src = 'nouroExp.html';
 }
-
-/*TOUCHPOINT BUTTONS*/
-
-function expandFirst() {
-  var x = document.getElementById("infoStart");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-
-function expandSecond() {
-  var x = document.getElementById("infoMiddle");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-
-function expandThird() {
-  var x = document.getElementById("infoEnd");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-
 
 
 /***CLOCK***/

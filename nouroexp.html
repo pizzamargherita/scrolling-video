@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Nouro experience</title>
+    
+    <link rel="stylesheet" href="experience.css">
+
+</head>
+<body>
+
+    <audio id="myAudio" src="experienceMedia/serenity-danijel-zambo-main-version-02-34-1405.mp3" preload="auto" loop></audio>
+
+    <div id="fourth-side" class="dropdown">
+        <span><img class="touch" src="experiencemedia/touchpoint.svg" alt="hover for more info"></span>
+        <div class="dropdown-content dc-right overlayExp" id="overlayExp">
+            <h1>You're In Control</h1>
+            <p>After ascension, the pod experiences can be accessed. Optical hand tracking adds freedom of motion in addition to tradition touchpad control.</p>
+            <p>An informative onboarding video will play at the beginning to make the user experience easier for travelers. The pod's interface will be designed with the ability to call flight attendants, visualize route maps, and display food and beverage menus.</p>
+        </div>
+    </div>
+    
+    <div id="first-dreamscape" class="dropdown">
+        <span><img class="touch" src="experienceMedia/touchpoint.svg" alt="hover for more info"></span>
+        <div class="dropdown-content overlayExp" id="overlayExp">
+            <h1>Dream Simulation</h1>
+            <p>Our <i>Dreamscape</i> collection soothes passengers to sleep with calming visuals and sounds.</p>
+        </div>
+    </div>
+
+    <div id="second-meditate" class="dropdown">
+        <span><img class="touch" src="experienceMedia/touchpoint.svg" alt="hover for more info"></span>
+        <div class="dropdown-content overlayExp" id="overlayExp">
+            <h1>Meditation</h1>
+            <p><i>Meditation</i> will focus the mind and prepare for the long journey ahead, talking passengers out of the cabin environment. Possible partnerships include companies such as Headspace.</p>
+        </div>
+    </div>
+
+    <div id="third-explore" class="dropdown">
+        <span><img class="touch" src="experienceMedia/touchpoint.svg" alt="hover for more info"></span>
+        <div class="dropdown-content overlayExp" id="overlayExp">
+            <h1>360° Adventures</h1>
+            <p>Explore a library of immersive adventures across the world's top destinations through 360° videos in <i>Adventure</i>. Possible partnerships include companies such as National Georgraphic.</p>
+        </div>
+    </div>
+
+
+    <div class="experienceContent-2">
+        <div #id="logo" class="logo" onclick="mainMenu()">
+            <img src="experienceMedia/finalAsset 9victoria wordmark.png" class="newLogo">
+        </div>
+
+        <div #id="plane-menu" class="plane-menu">
+            <img src="experienceMedia/callattendant-icon.svg" class="sideMenu-icon">
+            <img src="experienceMedia/worldmap-icon.svg" class="sideMenu-icon">
+            <img src="experienceMedia/dinner-icon.svg" class="sideMenu-icon">
+        </div>
+
+        <div id="menu" class="animated-up">            
+            <div class="icon-wrapper" onclick="openDreamscape()">
+                <img src="experienceMedia/moon.png" class="icon-1" alt="open dreamscape section icon">
+            </div>
+
+            <div class="icon-wrapper" onclick="openMeditation()">
+                <img src="experienceMedia/meditate.png" class="icon-2" alt="open meditation section icon">
+            </div>
+
+            <div class="icon-wrapper" onclick="openExplore()">
+                <img src="experienceMedia/explore.png" class="icon-4" alt="open explore section icon">
+            </div>
+        </div>
+
+        <div id="modal-dream">
+            <div class="dreamscape-menu">
+                <h2>Dreamscape</h2>
+                <img id="playpause-icon" src="experienceMedia/play-pause-icon.svg">
+            </div>
+            <video id="exp-video-1" class="exp-video-1", tabindex="0" , loop>
+                <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="experienceMedia/dreamscape.mp4"></source>
+            </video>
+        </div>
+
+        <div id="modal-meditation">
+            <div class="meditation-menu">
+                <h2>Meditation</h2>
+                <img id="playpause-icon" src="experienceMedia/play-pause-icon.svg">
+            </div>
+            <video id="exp-video-2" class="exp-video-2", tabindex="0" , loop>
+                <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="experienceMedia/meditation.mp4"></source>
+            </video>
+        </div>
+
+        <div id="modal-explore">
+            <div class="explore-menu">
+                <h2>Explore</h2>
+                <img id="playpause-icon" src="experienceMedia/play-pause-icon.svg">
+                <p><a class="external" href="https://www.nationalgeographic.com/photography/article/st-croix-buck-island-reef-exploration-360-vr" target="_blank">Example video sourced from National Geogrpahic</a></p>
+            </div>
+            <video id="exp-video-3" class="exp-video-3", tabindex="0" , loop>
+                <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="experienceMedia/yt5s.com-360° Underwater National Park _ National Geographic-(480p)_3.mp4"></source>
+            </video>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="icon-left">
+            <button id="exitButton" onclick="closeExperience()"><img class="footer-icon-svg" src="experienceMedia/exit.svg"></button>       
+        </div>
+        <div class="icon-right">
+            <button id="infoButton" class="infoButton" onclick="showTouchpoints()"><img class="footer-icon-svg" src="experienceMedia/info-icon.svg"></button>
+            <button id="audioButton" onclick="pause()">
+                <a onclick="togglePlay()"><img id="audioStatus" class="footer-icon-svg" src="experienceMedia/audio-play.svg"></a>
+            </button> 
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script  src="expScript.js"></script>
+</body>    
+</html>
