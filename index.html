@@ -192,28 +192,10 @@
   <div class="overlay" id="overlay">
      <h1>Making air travel <br> extraordinary. </h1>
     <p> Uniquely designed individual pods will create a unique environment for guests to enjoy our in-flight entertainment. Each seat will transform into an immersive pod comprised of LED screens encapsulating the passenger for complete privacy. Once the immersive experience is complete, the pod transforms back to its regular seat so the guest can enjoy the other perks on the plane.</p>
-    <!-- <p><a target="_BLANK" href="https://codepen.io/doddsy105/full/rtcbE/">Explore Inside the Pod</a></p> -->
+   <p><a target="_BLANK" href="https://codepen.io/doddsy105/full/rtcbE/">Explore Inside the Pod</a></p>
     <button id="launchButton" onclick="openExperience()">EXPLORE THE POD</button>
   </div>
 </div>
-
-<div id="clock-container">
-  <svg id="clock" viewBox="0 0 100 100">
-    <circle id="face" cx="50" cy="50" r="45" />
-    <g id="hands">
-      <rect id="hour" x="47.5" y="12.5" width="5" height="40" rx="2.5" ry="2.55" />
-      <rect id="min" x="48.5" y="12.5" width="3" height="40" rx="2" ry="2" />
-      <line id="sec" x1="50" y1="50" x2="50" y2="16" />
-    </g>
-  </svg>
-</div>
-
-<div id="watch">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/pocketwatch-no-second-hand.png" alt="Pocketwatch on chain" class="watch">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/second-hand.png" alt="Pocketwatch second hand" class="seconds">
-</div>
-<div id="pola"></div>
-
 <body onload="init()">
     <div id="responsiveVideo">
       <div id="wrapperVideo">
@@ -227,9 +209,6 @@
 <div id="time"> </div>
 <div id="scroll"> </div>
 
-
-
-
 <!-- HIDDEN POP UP CONTENT -->
 
 <div id="experienceContent">
@@ -237,19 +216,17 @@
       <div class="footer">
           <div>
               <button id="exitButton" onclick="openExperience()"><img src="experienceMedia/exit.png"></button>
-              <!-- <div id="mouseControlIcons">
-                  <img src="/experienceMedia/zoom_small.png">
-                  <img src="/experienceMedia/pan_small.png">
-              </div> -->
-          
+           <div id="mouseControlIcons">
+                  <img src="experienceMedia/zoom_small.png">
+                  <img src="experienceMedia/pan_small.png">
+         
           </div>
       </div>
-      <!-- <img id="insidePod" src="/media/playback_still.PNG"> -->
+   <img id="insidePod" src="media/playback_still.PNG"> 
 
       <video id="insidePod" , tabindex="0" , autobuffer preload autoplay loop>
           <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="experienceMedia/production ID_4652096.mp4"></source>
       </video>
-
   </section>
 
   <section>
@@ -284,9 +261,6 @@
       </div>
   </section>
 </div>
-
-
-
 
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
