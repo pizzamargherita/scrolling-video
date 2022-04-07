@@ -38,7 +38,6 @@ body {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(40,40,40,0.25);
-    z-index: 2500;
 }
 
 button, input[type="submit"], input[type="reset"] {
@@ -52,7 +51,14 @@ button, input[type="submit"], input[type="reset"] {
     margin: 0;
 }
 
-#exitButton, #audioButton, #infoButton {
+#exitButton {
+    display: inline-block;
+    border-bottom: transparent;
+    margin: 10px;
+    background-color: transparent;
+}
+
+#infoButton {
     display: inline-block;
     border-bottom: transparent;
     margin: 10px;
