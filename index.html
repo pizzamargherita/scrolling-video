@@ -190,9 +190,10 @@
 </div>
 <div id="overlayRight">
   <div class="overlay" id="overlay">
-    <h1>Making air travel <br> extraordinary. </h1>
+     <h1>Making air travel <br> extraordinary. </h1>
     <p> Uniquely designed individual pods will create a unique environment for guests to enjoy our in-flight entertainment. Each seat will transform into an immersive pod comprised of LED screens encapsulating the passenger for complete privacy. Once the immersive experience is complete, the pod transforms back to its regular seat so the guest can enjoy the other perks on the plane.</p>
-    <p><a target="_BLANK" href="https://codepen.io/doddsy105/full/rtcbE/">Explore Inside the Pod</a></p>
+    <!-- <p><a target="_BLANK" href="https://codepen.io/doddsy105/full/rtcbE/">Explore Inside the Pod</a></p> -->
+    <button id="launchButton" onclick="openExperience()">EXPLORE THE POD</button>
   </div>
 </div>
 
@@ -225,6 +226,68 @@
 <div id="set-height"> </div>
 <div id="time"> </div>
 <div id="scroll"> </div>
+
+
+
+
+<!-- HIDDEN POP UP CONTENT -->
+
+<div id="experienceContent">
+  <section>
+      <div class="footer">
+          <div>
+              <button id="exitButton" onclick="openExperience()"><img src="experienceMedia/exit.png"></button>
+              <!-- <div id="mouseControlIcons">
+                  <img src="/experienceMedia/zoom_small.png">
+                  <img src="/experienceMedia/pan_small.png">
+              </div> -->
+          
+          </div>
+      </div>
+      <!-- <img id="insidePod" src="/media/playback_still.PNG"> -->
+
+      <video id="insidePod" , tabindex="0" , autobuffer preload autoplay loop>
+          <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="experienceMedia/production ID_4652096.mp4"></source>
+      </video>
+
+  </section>
+
+  <section>
+      <div id="start">
+          <button class="touchpoint" onclick="expandFirst()"><img id="touch" src="experienceMedia/touchpoint.svg" alt="touch for more info"></button>
+          <div id="infoStart">
+              <div class="overlay" id="overlayExperience">
+              <h1>where to begin</h1>
+              <p>An informative onboarding video will play at the beginning to make the user experience easier for travelers. The pod's user interface will be designed with the ability to call flight attendants, visualize route maps, display food and beverage menus, and play a variety of immersive videos for users to explore.</p>
+              </div> 
+          </div>
+      </div>
+
+      <div id="middle">
+          <button class="touchpoint" onclick="expandSecond()"><img id="touch" src="experienceMedia/touchpoint.svg" alt="touch for more info"></button>
+          <div id="infoMiddle">
+              <div class="overlay" id="overlayExperience">
+              <h1>experience</h1>
+              <p>The pod's surrounding screens are safer than VR headsets to avoid the negative side effects of having the virtual world mere inches away from the user's face but still allow guests to be fully immersed in the experience of their choosing. </p>
+              </div>
+          </div>
+      </div>
+
+      <div id="end">
+          <button class="touchpoint" onclick="expandThird()"><img id="touch" src="experienceMedia/touchpoint.svg" alt="touch for more info"></button>
+          <div id="infoEnd">
+              <div class="overlay" id="overlayExperience">
+              <h1>your controls</h1>
+              <p>After ascension, the pod experiences can be accessed. Optical hand tracking adds freedom of motion in addition to tradition touchpad control. </p>
+              </div>
+          </div>
+      </div>
+  </section>
+</div>
+
+
+
+
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
   <script  src="./script.js"></script>
