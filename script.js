@@ -124,7 +124,7 @@ function openNewExperience() {
     x.style.display = 'flex';
   }
   var iframe = document.getElementById('newExp');
-  iframe.src = 'nouroexp.html';
+  iframe.src = './nouroexp.html';
 }
 
 
