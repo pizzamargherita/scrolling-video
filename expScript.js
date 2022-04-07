@@ -12,9 +12,14 @@
     } else {
         x.style.display = 'none';
     }
+    var expVideo = document.getElementById("exp-video-1");
+    expVideo.load();
+    var expVideo = document.getElementById("exp-video-2");
+    expVideo.load();
+    var expVideo = document.getElementById("exp-video-3");
+    expVideo.load();
     var sample = document.getElementById("myAudio");
     sample.pause();
-  
   }
 
   /*TOUCHPOINT BUTTONS*/
